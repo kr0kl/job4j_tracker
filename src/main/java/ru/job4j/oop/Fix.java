@@ -8,7 +8,7 @@ public class Fix {
     }
 
     public static void main(String[] args) {
-        String issue = "Fix you ASAP.";
+        String issue = "Fix you bug.";
         Fix item = new Fix(issue);
     }
 }
