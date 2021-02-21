@@ -5,14 +5,14 @@ public class Max {
         return Math.max(first, second);
     }
     public static int max(int first, int second, int third) {
-        return Math.max(first, max(second, third));
+        return max(first, max(second, third));
     }
     public static int max(int first, int second, int third, int fourth) {
-        return Math.max(max(first, second, third), fourth);
+        return max(first, max(second, third, fourth));
     }
 
     public static void main(String[] args) {
-        int big = Max.max(33, 55,99,77);
+        int big = max(33, 55,99,77);
         System.out.println(big);
     }
 }
