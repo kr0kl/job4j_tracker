@@ -1,4 +1,5 @@
 package ru.job4j.pojo;
+
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
 

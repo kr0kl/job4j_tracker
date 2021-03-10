@@ -7,7 +7,7 @@ public class Library {
         Book b3 = new Book("Том3", 103);
         Book b4 = new Book("Clean code", 104);
 
-        Book[]books = new Book[4];
+        Book[] books = new Book[4];
 
         books[0] = b1;
         books[1] = b2;
@@ -31,7 +31,7 @@ public class Library {
 
         for (int i = 0; i < books.length; i++) {
             Book bk = books[i];
-            if(bk.getName().equals("Clean code")) {
+            if (bk.getName().equals("Clean code")) {
 
                 System.out.println(bk.getName() + " - " + bk.getCount());
             }

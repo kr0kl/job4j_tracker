@@ -6,7 +6,7 @@ public class Profession {
     private String education;
     private String birthday;
 
-    public Profession(){
+    public Profession() {
 
     }
 
@@ -17,16 +17,19 @@ public class Profession {
         this.birthday = birthday;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    public String getSurname(){
+
+    public String getSurname() {
         return this.surname;
     }
-    public String getEducation(){
+
+    public String getEducation() {
         return this.education;
     }
-    public String getBirthday(){
+
+    public String getBirthday() {
         return this.birthday;
     }
 

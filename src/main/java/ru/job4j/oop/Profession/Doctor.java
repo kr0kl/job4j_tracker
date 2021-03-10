@@ -8,7 +8,7 @@ public class Doctor extends Profession {
         this.company = company;
     }
 
-    public String getCompany(){
+    public String getCompany() {
         return this.company;
     }
 }

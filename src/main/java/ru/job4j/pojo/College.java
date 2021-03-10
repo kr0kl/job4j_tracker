@@ -7,7 +7,7 @@ public class College {
         st1.setGroup("Java");
         st1.setDate(2018);
 
-        System.out.println(st1.getName()+":"+st1.getGroup()+"-"+st1.getDate());
+        System.out.println(st1.getName() + ":" + st1.getGroup() + "-" + st1.getDate());
 
     }
 }

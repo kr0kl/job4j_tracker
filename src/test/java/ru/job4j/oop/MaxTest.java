@@ -1,6 +1,7 @@
 package ru.job4j.oop;
 
 import org.junit.Test;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -19,7 +20,7 @@ public class MaxTest {
 
     @Test
     public void whenMax9To9Then9() {
-        int result = Max.max(9, 9,9,9);
+        int result = Max.max(9, 9, 9, 9);
         assertThat(result, is(9));
     }
 }
