@@ -3,7 +3,7 @@ package io;
 import java.util.Scanner;
 
 
-    public class Matches {
+public class Matches {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Игра 11.");
@@ -13,8 +13,13 @@ import java.util.Scanner;
             String player = turn ? "Первый игрок" : "Второй игрок";
             System.out.println(player + " введите число от 1 до 3:");
             int matches = Integer.parseInt(input.nextLine());
-            turn = !turn;
-            count -= matches;
+
+            if (matches <= 3 && matches > 0) {
+                count -= matches;
+                turn = !turn;
+            } else {
+                System.out.println("Неверное число");
+            }
             /* Остальная логика игры. */
         }
         if (!turn) {
