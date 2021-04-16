@@ -17,13 +17,12 @@ public class StartUI {
                 tracker.add(item);
             } else if (select == 1) {
                 Item[] allElements = tracker.findAll();
-                for (Item item : allElements)
+                for (Item item : allElements) {
                     System.out.println(item);
+                }
             } else if (select == 2) {
                 System.out.println("Enter id for edit");
                 int id = scanner.nextInt();
-                Item nameRequest = tracker.findById(id);
-                System.out.println(nameRequest);
                 System.out.print("Enter new name: ");
                 String newName = scanner.nextLine();
                 Item newItem = new Item(scanner.nextLine());
@@ -34,8 +33,7 @@ public class StartUI {
                 }
             } else if (select == 3) {
                 System.out.print("Enter id for delete request: ");
-                int id = scanner.nextInt();
-                Item newItem = new Item(scanner.nextLine());
+                int id = Integer.parseInt(scanner.nextLine());
                 if (tracker.delete(id)) {
                     System.out.println("Deleted id: " + id);
                 } else {
@@ -47,7 +45,7 @@ public class StartUI {
                 int id = scanner.nextInt();
                 Item newItem = new Item(scanner.nextLine());
                 Item resultFind = tracker.findById(id);
-                if (tracker.findById(id) != null) {
+                if (resultFind != null) {
                     System.out.println("Result find by id: " + resultFind);
                 } else {
                     System.out.println("Not found id: " + id);
@@ -56,10 +54,13 @@ public class StartUI {
                 System.out.print("Enter name for find: ");
                 String newName = scanner.nextLine();
                 Item[] resultFind = tracker.findByName(newName);
-                if (resultFind.length > 0) {
-                    System.out.println("Result find by name: " + 1);
+
+                if (resultFind == null) {
+                    System.out.println("Error. Not found name: ");
                 } else {
-                    System.out.println("Error. Not found name: " + newName);
+                    for (int i = 0; i < resultFind.length; i++) {
+                        System.out.println(resultFind[i]);
+                    }
                 }
             } else if (select == 6) {
                 run = false;
