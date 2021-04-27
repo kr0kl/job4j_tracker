@@ -22,7 +22,7 @@ public class StartUI {
                 }
             } else if (select == 2) {
                 System.out.println("Enter id for edit");
-                int id = scanner.nextInt();
+                int id = Integer.parseInt(scanner.nextLine());
                 System.out.print("Enter new name: ");
                 String newName = scanner.nextLine();
                 Item newItem = new Item(scanner.nextLine());
@@ -42,7 +42,7 @@ public class StartUI {
 
             } else if (select == 4) {
                 System.out.print("Enter id for find request: ");
-                int id = scanner.nextInt();
+                int id = Integer.parseInt(scanner.nextLine());
                 Item newItem = new Item(scanner.nextLine());
                 Item resultFind = tracker.findById(id);
                 if (resultFind != null) {
